@@ -1,8 +1,20 @@
-To install with cleanup protocol
+To install with [cleanup protocol](https://www.npmjs.com/package/cleanup-protocol)
 
 ```
 npm i estlint-plugin-enforce-cleanup --save-dev
 npm i cleanup-protocol
+```
+
+```json
+//.eslintrc.json
+
+{
+  "plugins": ["eslint-plugin-local-rules"],
+  "rules": {
+    "local-rules/enforce-cleanup-protocol": "warn",
+    "local-rules/enforce-call-cleanup": "warn"
+  }
+}
 ```
 
 This eslint rule package does two things:
