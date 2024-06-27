@@ -9,10 +9,10 @@ In your .eslintrc.json
 
 ```json
 {
-  "plugins": ["eslint-plugin-local-rules"],
+  "plugins": ["enforce-cleanup"],
   "rules": {
-    "local-rules/enforce-cleanup-protocol": "warn",
-    "local-rules/enforce-call-cleanup": "warn"
+    "enforce-cleanup/implement-cleanup": "error",
+    "enforce-cleanup/call-cleanup": "error"
   }
 }
 ```
