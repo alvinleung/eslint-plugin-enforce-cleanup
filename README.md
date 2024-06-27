@@ -5,9 +5,9 @@ npm i estlint-plugin-enforce-cleanup --save-dev
 npm i cleanup-protocol
 ```
 
-```json
-//.eslintrc.json
+In your .eslintrc.json
 
+```json
 {
   "plugins": ["eslint-plugin-local-rules"],
   "rules": {
