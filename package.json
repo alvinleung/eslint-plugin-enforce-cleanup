@@ -1,0 +1,21 @@
+{
+  "name": "eslint-enforce-cleanup",
+  "version": "1.0.0",
+  "description": "Enforce the calling of \"cleanup\" method in a class",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "prepare": "npm run build"
+  },
+  "author": "Alvin Leung",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "eslint": "^9.5.0",
+    "eslint-plugin-mocha": "^10.4.3",
+    "mocha": "^10.5.2",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
+  }
+}
