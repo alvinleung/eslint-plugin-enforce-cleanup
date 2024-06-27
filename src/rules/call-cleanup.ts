@@ -1,6 +1,7 @@
+// @ts-nocheck
 const ignoredList = require("./cleanup-ignore-list");
 
-module.exports = {
+export default {
   meta: {
     type: "suggestion",
     docs: {

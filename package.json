@@ -1,12 +1,17 @@
 {
-  "name": "eslint-enforce-cleanup",
-  "version": "1.0.0",
+  "name": "eslint-plugin-enforce-cleanup",
+  "version": "1.0.01",
   "description": "Enforce the calling of \"cleanup\" method in a class",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "publish": "npm run build && npm publish"
   },
   "author": "Alvin Leung",
   "license": "ISC",

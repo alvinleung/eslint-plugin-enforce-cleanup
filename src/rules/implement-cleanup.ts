@@ -1,3 +1,4 @@
+// @ts-nocheck
 const rule = {
   meta: {
     type: "suggestion",
@@ -16,9 +17,8 @@ const rule = {
         const existingInterfaces = node.implements
           ? node.implements.map((imp) => context.getSourceCode().getText(imp))
           : [];
-        const hasCleanupProtocol = existingInterfaces.includes(
-          "CleanupProtocol"
-        );
+        const hasCleanupProtocol =
+          existingInterfaces.includes("CleanupProtocol");
         if (!hasCleanupProtocol) {
           const classDeclarationEndPos = node.body.range[0];
           const insertPos = classDeclarationEndPos - 1; // Insert before the closing curly brace
@@ -42,4 +42,4 @@ const rule = {
   },
 };
 
-module.exports = rule;
+export default rule;
