@@ -3,10 +3,10 @@ This eslint rule package does three things:
 - Enforce the implementation of `CleanupProtocol` in Typescript Classes
 - Enforce the calling of `myClass.cleanup()` function in useEffect and classes
 
-With this rule, all the classes in the repository should implement
+With this rule, all the classes in the repository should implement `CleanupProtocol`
 
 ```typescript
-class MyClass implmenets CleanupProtoco {
+class MyClass implmenets CleanupProtocol {
   // ...
   cleanup():void {
     // implement cleanup code here
