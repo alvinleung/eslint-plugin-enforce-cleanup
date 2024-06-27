@@ -1,7 +1,8 @@
 This eslint rule package does three things:
+
 - Provide `CleanupProtocol` interface
 - Enforce the implementation of `CleanupProtocol` in Typescript Classes
-- Enforce the calling of `myClass.cleanup()` function in useEffect and classes
+- Enforce the calling of `myClass.cleanup()` function in useEffect and classes. It only apply checks for classes defined in the project.
 
 With this rule, all the classes in the repository should implement `CleanupProtocol`
 
