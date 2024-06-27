@@ -1,7 +1,7 @@
 To install with cleanup protocol
 
 ```
-npm i estlin-plugin-enforce-cleanup --save-dev
+npm i estlint-plugin-enforce-cleanup --save-dev
 npm i cleanup-protocol
 ```
 
