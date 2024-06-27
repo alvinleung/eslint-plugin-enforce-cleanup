@@ -13,9 +13,9 @@ This eslint rule package does two things:
 With this rule, all the classes in the repository should implement `CleanupProtocol`
 
 ```typescript
-class MyClass implemenets CleanupProtocol {
+class MyClass implements CleanupProtocol {
   // ...
-  cleanup():void {
+  cleanup(): void {
     // implement cleanup code here
   }
 }
