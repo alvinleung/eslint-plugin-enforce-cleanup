@@ -41,6 +41,17 @@ export default {
       NewExpression(node) {
         const parentNode = node.parent;
 
+        // check the ignored list, if its belongs there, just ignore the operations
+        const instanceClassName = node.callee.name;
+        const combinedIgnoreList = [
+          ...ignoredList.classes,
+          ...externalImportList,
+        ];
+        const isClassBelongToIngoredList = combinedIgnoreList.some(
+          (className) => className === instanceClassName
+        );
+        if (isClassBelongToIngoredList) return;
+
         if (
           parentNode.type !== "PropertyDefinition" &&
           parentNode.type !== "AssignmentExpression" &&
@@ -55,17 +66,6 @@ export default {
 
           return;
         }
-
-        // check the ignored list, if its belongs there, just ignore the operations
-        const instanceClassName = node.callee.name;
-        const combinedIgnoreList = [
-          ...ignoredList.classes,
-          ...externalImportList,
-        ];
-        const isClassBelongToIngoredList = combinedIgnoreList.some(
-          (className) => className === instanceClassName
-        );
-        if (isClassBelongToIngoredList) return;
 
         // obtain the variable reference name
         const instanceName = (() => {
